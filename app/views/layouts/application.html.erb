@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title><%= full_title(yield(:title))%></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <link href="css/bootstrap.min.css" rel="stylesheet" />
+	  <link href="css/bootstrap.min.css" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="ccwstyle.css" />
 </head>
+<a name="pagetop"></a>
 <body class = "container">
 
-	<header>
-		<div class="Container">
-			<div class="row">
-					<div class="span7"><h2><%= image_tag "cc_photo.jpg" %>    Christine C-W Chen</h2></div>
-				<div class="span5">| <%= link_to 'Summary', home_index_path %> | <%= link_to 'Professional', home_professional_path %> | <%= link_to 'Education', home_education_path %> | <%= link_to 'Personal', home_personal_path %> | <%= link_to 'Contact', home_contact_path %>  |</div>
-			</div>
+<div class="body_container">
+	
+	<header><!-- Global Header -->
+		<div class="header_global">
+			<div class="header_logo"><%= image_tag "cc_photo.jpg" %></div>
+			<div class="header_title"><h2>Christine C-W Chen</h2></div>
+			<div class="header_nav">| <%= link_to 'Summary', home_index_path %> | <%= link_to 'Professional', home_professional_path %> | <%= link_to 'Portfolio', home_products_path %> | <%= link_to 'Education', home_education_path %> | <%= link_to 'Personal', home_personal_path %> | <%= link_to 'Contact', home_contact_path %>  | <a href="resume_cchen.pdf" target="_blank">Printable Resume</a> |</div>
 		</div>
 	</header>
 	
@@ -23,16 +27,16 @@
 
 <%= yield %>
 
-	<!-- Global Footer -->
 
-    <footer class="container">
-			<div class="row">
-				<div class="span12">| <%= link_to 'Summary', home_index_path %> | <%= link_to 'Professional', home_professional_path %> | <%= link_to 'Education', home_education_path %> | <%= link_to 'Personal', home_personal_path %> | <%= link_to 'Contact', home_contact_path %>  |</div>
+	
+
+    <footer><!-- Global Footer -->
+		<div class="footer_global">
+			<div class="footer_nav">| <%= link_to 'Summary', home_index_path %> | <%= link_to 'Professional', home_professional_path %> | <%= link_to 'Portfolio', home_products_path %> | <%= link_to 'Education', home_education_path %> | <%= link_to 'Personal', home_personal_path %> | <%= link_to 'Contact', home_contact_path %>  | <a href="resume_cchen.pdf" target="_blank">Printable Resume</a> |<br /><span class="footer_text">This resume website is built with Ruby on Rails by Christine Chen and deployed through Github and Heroku.</div>
 		</div>
-			<p>This resume website is built with Ruby on Rails by Christine Chen and deployed through Github and Heroku.</p>
     </footer>
 
 
-
+</div>
 </body>
 </html>

@@ -1,4 +1,5 @@
-Ccwchen::Application.routes.draw do
+Ccwchen::Application.routes.draw do   get "comments/new"
+
   get "home/index"
 
   get "home/professional"
@@ -8,6 +9,10 @@ Ccwchen::Application.routes.draw do
   get "home/personal"
 
   get "home/contact"
+  
+    get "home/products"
+  
+get "home/print"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
