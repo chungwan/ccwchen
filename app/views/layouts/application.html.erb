@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Christine Chen's Resume | <%= yield(:title) %></title>
+  <title><%= full_title(yield(:title))%></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
 </head>
-<body>
+<body class = "container">
+
+	<header>
+		<div class="Container">
+			<div class="row">
+					<div class="span7"><h2><%= image_tag "cc_photo.jpg" %>    Christine C-W Chen</h2></div>
+				<div class="span5">| <%= link_to 'Summary', home_index_path %> | <%= link_to 'Professional', home_professional_path %> | <%= link_to 'Education', home_education_path %> | <%= link_to 'Personal', home_personal_path %> | <%= link_to 'Contact', home_contact_path %>  |</div>
+			</div>
+		</div>
+	</header>
+	
+	
+	
 
 <%= yield %>
+
+	<!-- Global Footer -->
+
+    <footer class="container">
+			<div class="row">
+				<div class="span12">| <%= link_to 'Summary', home_index_path %> | <%= link_to 'Professional', home_professional_path %> | <%= link_to 'Education', home_education_path %> | <%= link_to 'Personal', home_personal_path %> | <%= link_to 'Contact', home_contact_path %>  |</div>
+		</div>
+			<p>This resume website is built with Ruby on Rails by Christine Chen and deployed through Github and Heroku.</p>
+    </footer>
+
+
 
 </body>
 </html>
