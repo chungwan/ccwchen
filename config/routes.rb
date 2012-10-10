@@ -14,6 +14,10 @@ Ccwchen::Application.routes.draw do   get "comments/new"
   
 get "home/print"
 
+match '/professional' => 'home#professional'
+match '/personal' => 'home#personal'
+match '/education' => 'home#education'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

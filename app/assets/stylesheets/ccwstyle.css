@@ -3,7 +3,7 @@
 .header_global{width:980px;display:inline-block;position:relative;padding:5px;} 
 .header_logo {display:inline-block;width:60px;text-align:left;} 
 .header_title {display:inline-block;text-align:left;} 
-.header_nav {width:635px;display:inline-block;text-align:right;position:absolute;top:70px;} 
+.header_nav {width:660px;display:inline-block;text-align:right;position:absolute;top:65px;} 
 .header_nav a:hover {text-decoration:none;color:orange;font-weight:bold;}
 
 .page_title { width:980px;font-weight:bold;padding:5px}
